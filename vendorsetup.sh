@@ -1,10 +1,1 @@
-add_lunch_combo full_jfltexx-userdebug
-add_lunch_combo full_jfltecsp-userdebug
-add_lunch_combo full_jflteusc-userdebug
-add_lunch_combo full_jflteczw-userdebug
-add_lunch_combo full_jfltespr-userdebug
-add_lunch_combo full_jfltecri-userdebug
-add_lunch_combo full_jfltetmo-userdebug
-add_lunch_combo full_jfltecan-userdebug
-add_lunch_combo full_jflteatt-userdebug
-
+add_lunch_combo full_jflte-userdebug
