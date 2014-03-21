@@ -674,7 +674,7 @@ on property:service.bootanim.exit=1
 
 on property:dev.bootcomplete=1
     # disable pulsing led on boot complete
-    write /sys/class/sec/led/led_pattern 0
+    exec /system/bin/sh /system/etc/init.led.sh
 
 # CM Performance Profiles
 
