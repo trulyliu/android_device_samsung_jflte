@@ -26,9 +26,6 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/jflte/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -70,6 +67,13 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
     device/samsung/jflte/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     device/samsung/jflte/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
+    
+# F2FS
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+    
 
 # Ramdisk
 PRODUCT_PACKAGES += \
