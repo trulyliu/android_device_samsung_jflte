@@ -35,6 +35,10 @@ TARGET_KERNEL_CONFIG         := aosp_jf_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := jf_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 
+# Toolchain
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := Linaro-4.7
+TARGET_GCC_VERSION_AND := 4.8
+
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # WiFi module
