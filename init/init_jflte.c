@@ -34,6 +34,11 @@
 #include "log.h"
 #include "util.h"
 
+<<<<<<< HEAD
+=======
+void gsm_properties();
+void cdma_properties(char cdma_sub[]);
+>>>>>>> 0f37d3b... jflte: set proper lte mode and default network mode
 
 void vendor_load_properties()
 {
@@ -51,6 +56,7 @@ void vendor_load_properties()
 
     if (strstr(bootloader, "I337M")) {
         /* jfltecan */
+        gsm_properties();
         property_set("ro.build.fingerprint", "samsung/jfltevl/jfltecan:4.2.2/JDQ39/I337MVLUAMDJ:user/release-keys");
         property_set("ro.build.description", "jfltevl-user 4.2.2 JDQ39 I337MVLUAMDJ release-keys");
         property_set("ro.product.model", "SGH-I337M");
@@ -59,6 +65,7 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "9");
     } else if (strstr(bootloader, "I337")) {
         /* jflteatt */
+        gsm_properties();
         property_set("ro.product.device", "jflteatt");
         property_set("ro.product.model", "SGH-I337");
         property_set("ro.build.fingerprint", "samsung/jflteuc/jflteatt:4.2.2/JDQ39/I337UCUAMDL");
@@ -102,6 +109,7 @@ void vendor_load_properties()
         property_set("ro.gps.set_privacy", "1");
     } else if (strstr(bootloader, "M919")) {
         /* jfltetmo */
+        gsm_properties();
         property_set("ro.build.fingerprint", "samsung/jfltetmo/jfltetmo:4.3/JSS15J/M919UVUEMK2:user/release-keys");
         property_set("ro.build.description", "jfltetmo-user 4.3 JSS15J M919UVUEMK2 release-keys");
         property_set("ro.product.model", "SGH-M919");
@@ -135,6 +143,7 @@ void vendor_load_properties()
         property_set("ro.gps.set_privacy", "1");
     } else if (strstr(bootloader, "I9505G")) {
         /* jgedlte */
+        gsm_properties();
         property_set("ro.build.fingerprint", "samsung/jgedlteue/jgedlte:4.4.2/KOT49H.S001/131204:user/release-keys");
         property_set("ro.build.description", "jgedlteue-user 4.4.2 KOT49H.S001 131204 release-keys");
         property_set("ro.product.model", "GT-I9505G");
@@ -143,6 +152,7 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "9");
     } else if (strstr(bootloader, "I9505")) {
         /* jfltexx */
+        gsm_properties();
         property_set("ro.build.fingerprint", "samsung/jfltexx/jflte:4.2.2/JDQ39/I9505XXUAMDE:user/release-keys");
         property_set("ro.build.description", "jfltexx-user 4.2.2 JDQ39 I9505XXUAMDE release-keys");
         property_set("ro.product.model", "GT-I9505");
@@ -151,6 +161,7 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "9");
     } else if (strstr(bootloader, "I9508")) {
         /* jfltezm */
+        gsm_properties();
         property_set("ro.build.fingerprint", "samsung/jfltezm/jflte:4.2.2/JDQ39/I9508ZMUAMG1:user/release-keys");
         property_set("ro.build.description", "jfltezm-user 4.2.2 JDQ39 I9508ZMUAMG1 release-keys");
         property_set("ro.product.model", "GT-I9508");
@@ -163,3 +174,21 @@ void vendor_load_properties()
     ERROR("Found bootloader id %s setting build properties for %s device\n", bootloader, device);
 
 }
+<<<<<<< HEAD
+=======
+
+void gsm_properties()
+{
+    property_set("telephony.lteOnGsmDevice", "1");
+    property_set("ro.telephony.default_network", "9");
+}
+
+void cdma_properties(char cdma_sub[])
+{
+    property_set("ro.telephony.default_cdma_sub", cdma_sub); // 0: RUIM/SIM  1: NV
+    property_set("ro.gps.set_privacy", "1");
+    property_set("ro.telephony.ril.v3", "newDriverCallU");
+    property_set("telephony.lteOnCdmaDevice", "1");
+    property_set("ro.telephony.default_network", "10");
+}
+>>>>>>> 0f37d3b... jflte: set proper lte mode and default network mode
