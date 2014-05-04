@@ -34,11 +34,8 @@
 #include "log.h"
 #include "util.h"
 
-<<<<<<< HEAD
-=======
 void gsm_properties();
 void cdma_properties(char cdma_sub[]);
->>>>>>> 0f37d3b... jflte: set proper lte mode and default network mode
 
 void vendor_load_properties()
 {
@@ -174,8 +171,6 @@ void vendor_load_properties()
     ERROR("Found bootloader id %s setting build properties for %s device\n", bootloader, device);
 
 }
-<<<<<<< HEAD
-=======
 
 void gsm_properties()
 {
@@ -191,4 +186,3 @@ void cdma_properties(char cdma_sub[])
     property_set("telephony.lteOnCdmaDevice", "1");
     property_set("ro.telephony.default_network", "10");
 }
->>>>>>> 0f37d3b... jflte: set proper lte mode and default network mode
