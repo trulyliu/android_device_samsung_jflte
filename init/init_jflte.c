@@ -165,6 +165,8 @@ void vendor_load_properties()
         property_set("ro.product.device", "jfltezm");
         property_set("telephony.lteOnGsmDevice", "1");
         property_set("ro.telephony.default_network", "9");
+        property_set("ro.telephony.ril.v3", "newDriverCall,signalstrength,TdScdmaSignalStrength");
+        property_set("persist.sys.strictmode.disable","1");
     }
 
     property_get("ro.product.device", device);
