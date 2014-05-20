@@ -137,6 +137,8 @@ void vendor_load_properties()
         property_set("ro.build.description", "jfltezm-user 4.2.2 JDQ39 I9508ZMUAMG1 release-keys");
         property_set("ro.product.model", "GT-I9508");
         property_set("ro.product.device", "jfltezm");
+        property_set("ro.telephony.ril.v3", "newDriverCall,TdScdmaSignalStrength");
+        property_set("persist.sys.strictmode.disable","1");
     }
     property_get("ro.product.device", device);
     ERROR("Found bootloader id %s setting build properties for %s device\n", bootloader, device);
